@@ -1,0 +1,2 @@
+install cmd
+npm i express mongoose cors dotenv nodemon esm jsonwebtoken bcrypt morgan
