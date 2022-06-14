@@ -10,8 +10,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(()=>console.log('this is my own middleware'));
-
+// app.use((req,res,next)=>{
+//     console.log('this is my own middleware');
+//     next();
+// });
 
 //route
 app.get('/',(req,res)=>{
