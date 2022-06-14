@@ -48,6 +48,7 @@ const Register = ()=>{
                         Submit
                     </button>
                 </form>
+                
             </div>
         </>
     )
