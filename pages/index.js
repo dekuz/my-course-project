@@ -1,9 +1,8 @@
 const index = ()=>{
     return(
         <>
-            <h1 className="jumbotron text-center bg-primary"> Hello World</h1>
-            <p> from next js</p>
-        
+            <h1 className="p-5 big-header text-center bg-primary"> Online Education</h1>
+                    
         </>
 
     )

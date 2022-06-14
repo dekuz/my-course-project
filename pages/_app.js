@@ -5,7 +5,12 @@ import '../public/css/style.css';
 
 
 function MyApp ({Component,pageProps}){
-    return <Component {...pageProps}/>
+    return(
+        <>
+            <TopNav/>
+            <Component{...pageProps}/>
+        </>
+    )
 }
 
 export default MyApp;
