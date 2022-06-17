@@ -1,15 +1,18 @@
 import { useState } from "react";
+import axios from 'axios'
 
 
 const Register = ()=>{
 
-    const [name,setName]=useState('')
-    const [email,setEmail]=useState('')
-    const [password,setPassword]=useState('')
+    const [name,setName]=useState('dekuz')
+    const [email,setEmail]=useState('kusyanadede@gmail.com')
+    const [password,setPassword]=useState('123')
 
-    const handleSubmit=(e)=>{
+    const handleSubmit= async (e)=>{
         e.preventDefault();
-        console.table({name,email,password})
+        // console.table({name,email,password})
+        const{data} = await axios.post('http://localhost:8000/api/register');
+        console.log("REGISTER RESPONSE", data);
     };
     return(
         <>
@@ -44,11 +47,11 @@ const Register = ()=>{
                         required
                     />
                     
-                    {/* <div class="d-grid"> */}
-                        <button type="submit" className="btn btn-primary">
-                            Submit
-                        </button>
-                    {/* </div> */}
+                    
+                    <button type="submit" className="btn btn-primary">
+                        Submit
+                    </button>
+                    
                 </form>
             </div>
         </>
